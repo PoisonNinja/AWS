@@ -5,7 +5,8 @@ sudo apt update
 sudo apt upgrade -fy
 
 # Install our packages
-for dir in `find . -type d`
+for dir in `find . -type d -maxdepth 1 -mindepth 1 -not -wholename "./.git*"`
 do
-    bash $dir/install.sh
+    echo $dir
+    # bash $dir/install.sh
 done
