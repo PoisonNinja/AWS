@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # NodeJS
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt install -y nodejs
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+source ~/.bash_profile
+nvm install node
 
 # Node packages
-sudo npm install -g gulp bower pm2
+npm install -g gulp bower pm2
